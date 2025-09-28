@@ -1,0 +1,95 @@
+/* Global */
+:root {
+  --bg: #000000;
+  --text: #e6d6b8;
+  --accent: #d4af37;
+}
+
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Navigacija */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: transparent;
+}
+
+.nav .brand {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--text);
+  letter-spacing: 2px;
+}
+
+.nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: var(--accent);
+}
+
+/* Hero sekcija */
+.hero {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 24px;
+  text-align: center;
+}
+
+.hero-img {
+  max-width: 90vw;   /* skaluje se za mobilne ekrane */
+  margin: 0 auto 24px;
+  display: block;
+  border-radius: 12px; /* ako želiš blagi okvir */
+}
+
+.tagline {
+  font-size: 20px;
+  margin: 20px auto;
+  max-width: 700px;
+}
+
+/* Dugme */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.btn.outline {
+  border: 2px solid var(--accent);
+  color: var(--text);
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn.outline:hover {
+  background: var(--accent);
+  color: #000;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  font-size: 14px;
+  padding: 20px;
+  margin-top: 40px;
+  opacity: 0.7;
+}
