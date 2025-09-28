@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: 'Cinzel', serif;
+  background-color: #0d0d0d;
+  color: #d4af37;
+  text-align: center;
+}
+
+/* Navigacija */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #111;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav .brand {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #d4af37;
+}
+
+.nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #d4af37;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #fff;
+}
+
+.nav a.active {
+  color: #fff;
+  border-bottom: 2px solid #d4af37;
+  padding-bottom: 3px;
+}
+
+/* Intro */
+.intro {
+  padding: 40px 20px;
+  font-size: 1.1em;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #e5c07b;
+}
+
+/* Likovi */
+.characters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 40px;
+}
+
+.character img {
+  max-width: 200px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.7);
+}
+
+.character h2 {
+  margin: 10px 0 5px;
+  color: #e6c200;
+}
+
+.character p {
+  font-size: 15px;
+  line-height: 1.4em;
+  color: #cbb67d;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: #111;
+  margin-top: 40px;
+}
