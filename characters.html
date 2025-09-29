@@ -1,93 +1,81 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nightlings • Characters</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Elegant, ali mračan serif + slab sans za pomoćni tekst -->
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="characters.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nightlings | Characters</title>
+  <link rel="stylesheet" href="characters.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- tamni overlay ide iz CSS-a preko body::before -->
-  <header class="site-header">
-    <h1 class="wordmark glow-red">NIGHTLINGS</h1>
-    <nav class="main-nav glow-red">
+  <header>
+    <h1>NIGHTLINGS</h1>
+    <nav>
       <a href="index.html">Home</a>
-      <a href="characters.html" class="active">Characters</a>
+      <a href="characters.html">Characters</a>
       <a href="story.html">Story</a>
       <a href="collect.html">Collect</a>
     </nav>
   </header>
 
-  <main>
-    <!-- Kratka priča o Nightlingsima -->
-    <section class="intro">
+  <section class="intro">
+    <p>
+      When the lights go out, the Nightlings move as quiet as breath. 
+      They don’t come to scare you — they guard your dreams and push nightmares into the corner. 
+      If you hear a faint crackle or see a candle flicker by itself... that’s their sign.
+    </p>
+  </section>
+
+  <main class="grid">
+    <!-- Grimmie -->
+    <article class="card">
+      <h2>Grimmie</h2>
+      <img src="assets/grimmie.png" alt="Grimmie the Nightling">
       <p>
-        Kad se svetla ugase, Nightlingsi se pomere tiho kao dah. Ne dolaze da plaše —
-        čuvaju snove i guraju noćne strahove u ćošak. Ako čuješ tiho pucketanje
-        ili vidiš da sveća sama zatreperi… to je znak da su tu.
+        Sitting by the door, Grimmie listens to the hall.  
+        When a dark shadow appears, he growls — and the shadow runs like smoke.
       </p>
-    </section>
+    </article>
 
-    <!-- Likovi -->
-    <section class="grid">
-      <article class="card">
-        <h3 class="name glow-red">Grimmie</h3>
-        <figure class="art">
-          <img src="assets/grimmie.png" alt="Grimmie the Nightling" loading="lazy">
-        </figure>
-        <p class="blurb">
-          Sedi mirno kraj vrata i sluša hodnik. Kad se pojavi loša senka,
-          Grimmie samo zareži — i senka pobegne kao dim.
-        </p>
-      </article>
+    <!-- Nyx -->
+    <article class="card">
+      <h2>Nyx</h2>
+      <img src="assets/nyx.png" alt="Nyx the Nightling">
+      <p>
+        The quietest of all. Nyx erases fear like chalk on a board.  
+        If you hear a whisper: “It’s nothing”… that’s Nyx calming the dark.
+      </p>
+    </article>
 
-      <article class="card">
-        <h3 class="name glow-red">Nyx</h3>
-        <figure class="art">
-          <img src="assets/nyx.png" alt="Nyx the Nightling" loading="lazy">
-        </figure>
-        <p class="blurb">
-          Najtiši od svih. Čisti tragove straha kao gumicom.
-          Ako čuješ šapat “nije ništa”, to je Nyx kako smiruje mrak.
-        </p>
-      </article>
+    <!-- Reddox -->
+    <article class="card">
+      <h2>Reddox</h2>
+      <img src="assets/reddox.png" alt="Reddox the Nightling">
+      <p>
+        Always grinning, Reddox sparks little flames in the dark.  
+        His laugh scatters nightmares until they vanish like mist.
+      </p>
+    </article>
 
-      <article class="card">
-        <h3 class="name glow-red">Reddox</h3>
-        <figure class="art">
-          <img src="assets/reddoxx.png" alt="Reddox the Nightling" loading="lazy">
-        </figure>
-        <p class="blurb">
-          Uvek se smeje i pali malu varnicu u mraku. Njegov smeh tera ružne
-          snove da se rasprše kao iskra u noći.
-        </p>
-      </article>
-
-      <article class="card">
-        <h3 class="name glow-red">Brownie</h3>
-        <figure class="art">
-          <img src="assets/brownie.png" alt="Brownie the Nightling" loading="lazy">
-        </figure>
-        <p class="blurb">
-          Topao kao ćebe, sedi uz jastuk i drži stražu.
-          Ako su oči teške, Brownie mrdi nos i snovi postanu mekani.
-        </p>
-      </article>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta">
-      <p class="maybe">Maybe there is more of them…</p>
-      <a class="btn-collect" href="collect.html">Can you collect them all?</a>
-    </section>
+    <!-- Brownie -->
+    <article class="card">
+      <h2>Brownie</h2>
+      <img src="assets/brownie.png" alt="Brownie the Nightling">
+      <p>
+        Warm as a blanket, Brownie sits by your pillow.  
+        When your eyes grow heavy, he twitches his nose — and dreams turn soft.
+      </p>
+    </article>
   </main>
 
-  <footer class="site-footer">
-    © Nightlings | All rights reserved.
+  <footer>
+    <p style="text-align:center; color:#ff0000; margin-top:20px;">
+      Maybe there are more of them… <br>
+      <a href="collect.html" style="color:#ff0000; text-decoration:underline;">Can you collect them all?</a>
+    </p>
+    <p style="text-align:center; font-size:0.8rem; color:#aaa;">
+      © Nightlings | All rights reserved.
+    </p>
   </footer>
 </body>
 </html>
