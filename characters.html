@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nightlings - Characters</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nightlings • Characters</title>
+
+  <!-- Google font (opciono, možeš obrisati ako želiš samo sistemske) -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS za ovu stranicu -->
+  <link rel="stylesheet" href="characters.css" />
 </head>
 <body>
-  <header class="nav">
-    <div class="brand">Nightlings</div>
-    <nav>
+  <!-- “Soba” pozadina -->
+  <div class="room-bg" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <h1 class="brand">NIGHTLINGS</h1>
+
+    <nav class="main-nav">
       <a href="index.html">Home</a>
       <a href="characters.html" class="active">Characters</a>
       <a href="story.html">Story</a>
@@ -17,37 +27,71 @@
     </nav>
   </header>
 
-  <main class="characters">
-    <h2>In dark rooms where children sleep, the Nightlings guard their dreams.  
-    Each creature hides a secret... will you dare to meet them all?</h2>
+  <!-- Uvod -->
+  <section class="intro">
+    <p>
+      Nightlings se šunjaju kad se ugasi svetlo, ali nisu tu da plaše.  
+      Čuvaju snove i guraju košmare u ćošak dok spavaš.
+    </p>
+  </section>
 
-    <div class="character-grid">
-      <div class="character">
-        <img src="nyx.png" alt="Nyx">
-        <h3>Nyx</h3>
-        <p>Born from midnight silence. Where he appears, shadows grow thicker.</p>
+  <!-- Likovi -->
+  <main class="grid">
+    <!-- GRIMMIE -->
+    <article class="card">
+      <div class="img-wrap">
+        <img src="assets/grimmie.jpg" alt="Grimmie the Nightling" loading="lazy">
       </div>
+      <h2>Grimmie</h2>
+      <p>
+        Sedi mirno kraj vrata i sluša šumove hodnika.  
+        Kad se pojavi loša senka, on samo reži — i senka pobegne.
+      </p>
+      <a class="cta" href="collect.html">Collect Grimmie</a>
+    </article>
 
-      <div class="character">
-        <img src="skarn.png" alt="Skarn">
-        <h3>Skarn</h3>
-        <p>Tough as stone, silent as ash. His steps echo through the dark.</p>
+    <!-- NYX -->
+    <article class="card">
+      <div class="img-wrap">
+        <img src="assets/nyx.jpg" alt="Nyx the Nightling" loading="lazy">
       </div>
+      <h2>Nyx</h2>
+      <p>
+        Najtiši od svih, briše tragove straha kao gumicom.  
+        Ako čuješ šapat “nije ništa”, to je Nyx.
+      </p>
+      <a class="cta" href="collect.html">Collect Nyx</a>
+    </article>
 
-      <div class="character">
-        <img src="reddox.png" alt="Reddox">
-        <h3>Reddox</h3>
-        <p>The playful scamp. Mischief glimmers in his grin.</p>
+    <!-- REDDOX -->
+    <article class="card">
+      <div class="img-wrap">
+        <img src="assets/reddox.jpg" alt="Reddox the Nightling" loading="lazy">
       </div>
+      <h2>Reddox</h2>
+      <p>
+        Uvek se smeje i pali malu varnicu u mraku.  
+        Njegov smeh tera ružne snove da se rasprše kao dim.
+      </p>
+      <a class="cta" href="collect.html">Collect Reddox</a>
+    </article>
 
-      <div class="character">
-        <img src="grimmie.png" alt="Grimmie">
-        <h3>Grimmie</h3>
-        <p>His laughter echoes from the shadows, chilling all who hear it.</p>
+    <!-- BROWNIE -->
+    <article class="card">
+      <div class="img-wrap">
+        <img src="assets/brownie.jpg" alt="Brownie the Nightling" loading="lazy">
       </div>
-    </div>
-
-    <p class="collect">Can you collect them all?</p>
+      <h2>Brownie</h2>
+      <p>
+        Topao kao ćebe, sedi uz jastuk i čuva stražu.  
+        Ako se trzneš u snu, on te samo blago pogura nazad u mir.
+      </p>
+      <a class="cta" href="collect.html">Collect Brownie</a>
+    </article>
   </main>
+
+  <footer class="site-footer">
+    © Nightlings | All rights reserved.
+  </footer>
 </body>
 </html>
