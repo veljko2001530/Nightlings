@@ -1,187 +1,103 @@
-/* ====== Theme ====== */
-:root{
-  --bg: #0a0a0a;            /* fallback ako slika ne učita */
-  --text: #e8d6bb;          /* topla svetla za tekst */
-  --red: #e31b1b;           /* glavna crvena */
-  --red-glow: rgba(227,27,27,.55);
-  --panel: rgba(10,10,10,.65);
-  --panel-border: #2b0f0f;
+/* ===== Base Styles ===== */
+body {
+  margin: 0;
+  font-family: 'Cinzel', serif;  /* creepy fantasy font */
+  color: #e31b1b; /* krvavo crvena */
+  background: url("assets/room.png") no-repeat center center fixed;
+  background-size: cover;
 }
 
-/* Global reset */
-*{ box-sizing: border-box; }
-html,body{ height:100%; }
-body{
-  margin:0;
-  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color: var(--text);
-  background: var(--bg) url("assets/room.png") center/cover fixed no-repeat;
+/* ===== Header ===== */
+.site-title {
+  text-align: center;
+  font-size: 3.5rem;
+  color: #e31b1b;
+  text-shadow: 0 0 15px #000;
+  margin-top: 20px;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 10px 0 40px;
+}
+
+.main-nav a {
+  color: #e31b1b;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-shadow: 0 0 10px #000;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Intro ===== */
+.intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
   line-height: 1.6;
-  /* tamni overlay da sve bude čitko preko fotke */
-  position: relative;
-}
-body::before{
-  content:"";
-  position: fixed;
-  inset:0;
-  background:
-    radial-gradient(ellipse at 50% 0%, rgba(0,0,0,.35), transparent 60%),
-    linear-gradient(to bottom, rgba(0,0,0,.75), rgba(0,0,0,.8));
-  pointer-events:none;
-  z-index:-1;
+  color: #e31b1b;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  border-radius: 8px;
 }
 
-/* Header */
-.site-header{
-  text-align:center;
-  padding: 28px 16px 10px;
-}
-.wordmark{
-  margin:0 0 12px 0;
-  font-family: "Cinzel", Georgia, "Times New Roman", serif;
-  font-weight: 800;
-  letter-spacing:.08em;
-  font-size: clamp(34px, 8vw, 80px);
-}
-.glow-red{
-  color: var(--red);
-  text-shadow:
-    0 0 8px var(--red-glow),
-    0 0 18px var(--red-glow),
-    0 2px 0 rgba(0,0,0,.6);
-}
-
-.main-nav{
-  display:flex;
-  gap: clamp(14px, 7vw, 44px);
-  justify-content:center;
-  align-items:center;
-  flex-wrap:wrap;
-  font-family: "Cinzel", Georgia, serif;
-  font-weight: 700;
-  letter-spacing:.06em;
-  font-size: clamp(16px, 4.6vw, 28px);
-}
-.main-nav a{
-  color: var(--red);
-  text-decoration:none;
-  position:relative;
-  padding:.15em .1em;
-  transition: transform .15s ease, text-shadow .2s ease, opacity .2s;
-  opacity:.95;
-}
-.main-nav a:hover,
-.main-nav a.active{
-  text-shadow: 0 0 10px var(--red-glow), 0 0 22px var(--red-glow);
-  transform: translateY(-1px);
-  opacity:1;
-}
-
-/* Intro text */
-.intro{
-  max-width: 820px;
-  margin: 18px auto 14px;
-  padding: 14px 18px;
-  background: var(--panel);
-  border: 1px solid var(--panel-border);
-  border-radius: 14px;
-  backdrop-filter: blur(2px);
-}
-.intro p{ margin:0; }
-
-/* Cards grid */
-.grid{
-  --col: 1;
+/* ===== Characters Grid ===== */
+.grid {
   display: grid;
-  grid-template-columns: repeat(var(--col), minmax(0,1fr));
-  gap: 18px;
-  max-width: 1080px;
-  margin: 14px auto 30px;
-  padding: 0 14px;
-}
-@media (min-width: 720px){
-  .grid{ --col: 2; gap: 22px; }
-}
-@media (min-width: 1100px){
-  .grid{ --col: 4; gap: 24px; }
+  gap: 30px;
+  grid-template-columns: repeat(2, 1fr); /* dve kolone na desktopu */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.card{
-  background: var(--panel);
-  border: 1px solid var(--panel-border);
-  border-radius: 16px;
-  padding: 14px 14px 18px;
-  text-align:center;
-  box-shadow: 0 6px 18px rgba(0,0,0,.35);
-  transition: transform .18s ease, box-shadow .18s ease;
-}
-.card:hover{
-  transform: translateY(-3px);
-  box-shadow: 0 10px 26px rgba(0,0,0,.45);
+/* ===== Character Cards ===== */
+.card {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.9);
 }
 
-.name{
-  margin: 6px 0 4px 0;
-  font-family: "Cinzel", Georgia, serif;
-  font-weight: 800;
-  letter-spacing: .06em;
-  font-size: clamp(20px, 5.2vw, 28px);
+.card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #e31b1b;
 }
 
-.art{
-  margin: 6px 0 8px 0;
-  display:flex;
-  align-items:flex-end;
-  justify-content:center;
-  min-height: 210px;            /* rezerviše prostor za slike */
-}
-.art img{
-  display:block;
+.card img {
   max-width: 100%;
-  max-height: 260px;
-  height:auto;
-  filter: drop-shadow(0 10px 24px rgba(0,0,0,.7));
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 15px;
 }
 
-.blurb{
-  margin: 8px 6px 0;
-  font-size: clamp(14px, 3.8vw, 16px);
-  color: #d8cbb0;
+.card p {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #e31b1b;
 }
 
-/* CTA */
-.cta{
-  text-align:center;
-  margin: 22px 0 34px;
-}
-.maybe{
-  margin: 0 0 10px;
-  font-style: italic;
-  opacity:.9;
-}
-.btn-collect{
-  display:inline-block;
-  padding: 10px 18px;
-  font-family: "Cinzel", Georgia, serif;
-  font-weight: 800;
-  letter-spacing:.06em;
-  color: #000;
-  background: var(--red);
-  border-radius: 10px;
-  text-decoration:none;
-  box-shadow: 0 0 22px var(--red-glow);
-  transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
-}
-.btn-collect:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 0 30px var(--red-glow);
-  filter: saturate(115%);
+/* ===== Footer ===== */
+.footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
 }
 
-/* Footer */
-.site-footer{
-  text-align:center;
-  font-size: 14px;
-  padding: 28px 12px 34px;
-  opacity:.75;
+.footer .teaser {
+  font-size: 1.1rem;
+  color: #e31b1b;
+  margin-bottom: 8px;
+}
+
+.footer a {
+  color: #e31b1b;
+  font-weight: bold;
 }
