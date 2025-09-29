@@ -1,17 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nightlings</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nightlings • Home</title>
+
+  <!-- Google font za naslov / navigaciju -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&display=swap" rel="stylesheet">
+
+  <!-- Glavni CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Navigacija -->
-  <header class="nav">
-    <div class="brand">NIGHTLINGS</div>
-    <nav>
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <h1 class="brand">NIGHTLINGS</h1>
+
+    <!-- Navigacija ispod naslova -->
+    <nav class="main-nav" aria-label="Primary">
       <a href="index.html" class="active">Home</a>
       <a href="characters.html">Characters</a>
       <a href="story.html">Story</a>
@@ -19,20 +26,19 @@
     </nav>
   </header>
 
-  <!-- Hero sekcija -->
+  <!-- ===== HERO ===== -->
   <section class="hero" id="home">
-    <img class="hero-img" src="assets/reddox.png" alt="Nightlings"> 
-    <p class="tagline">
-      Lost in the dark corners of the world, the Nightlings are a family of mischievous creatures.  
-      Though they mean no harm, they still haunt our fears.
-    </p>
-    <a class="btn outline" href="collect.html">Collect Them All</a>
+    <img class="hero-img" src="assets/reddox.png" alt="Nightlings Monsters" />
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    © Nightlings | All rights reserved.
-  </footer>
+  <!-- ===== TAGLINE / COPY ===== -->
+  <section class="copy">
+    <p class="tagline">
+      Lost in the dark corners of the world, the Nightlings are a family of mischievous creatures. Though they mean no harm, they still haunt our fears.
+    </p>
+  </section>
 
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">© Nightlings | All rights reserved.</footer>
 </body>
 </html>
