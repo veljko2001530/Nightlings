@@ -1,103 +1,96 @@
-/* ===== Base Styles ===== */
+/* Global */
 body {
   margin: 0;
-  font-family: 'Cinzel', serif;  /* creepy fantasy font */
-  color: #e31b1b; /* krvavo crvena */
-  background: url("assets/room.png") no-repeat center center fixed;
+  padding: 0;
+  font-family: 'Cinzel', serif; /* ili koji si koristio */
+  background: url('room.png') no-repeat center center fixed;
   background-size: cover;
+  color: #e6e6e6;
 }
 
-/* ===== Header ===== */
-.site-title {
+/* Header & nav */
+header {
   text-align: center;
-  font-size: 3.5rem;
-  color: #e31b1b;
+  padding: 20px 10px;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: #ff0000;
   text-shadow: 0 0 15px #000;
-  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
-.main-nav {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  margin: 10px 0 40px;
-}
-
-.main-nav a {
-  color: #e31b1b;
+nav a {
+  color: #ff0000;
   text-decoration: none;
+  margin: 0 15px;
   font-size: 1.2rem;
-  text-shadow: 0 0 10px #000;
+  text-shadow: 0 0 5px #000;
 }
 
-.main-nav a:hover {
-  text-decoration: underline;
+nav a:hover {
+  border-bottom: 2px solid #ff0000;
 }
 
-/* ===== Intro ===== */
+/* Intro text */
 .intro {
-  text-align: center;
   max-width: 800px;
-  margin: 0 auto 40px;
+  margin: 20px auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #e31b1b;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 15px;
-  border-radius: 8px;
+  color: #e6e6e6;
 }
 
-/* ===== Characters Grid ===== */
+/* Grid for cards */
 .grid {
   display: grid;
-  gap: 30px;
-  grid-template-columns: repeat(2, 1fr); /* dve kolone na desktopu */
-  max-width: 1200px;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 900px;
   margin: 0 auto;
+  padding: 20px;
 }
 
-/* ===== Character Cards ===== */
+/* Card style */
 .card {
-  background: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 15px;
   text-align: center;
-  box-shadow: 0 0 20px rgba(0,0,0,0.9);
+  box-shadow: 0 0 15px rgba(255,0,0,0.2);
 }
 
 .card h2 {
-  font-size: 1.8rem;
+  color: #ff0000;
   margin-bottom: 10px;
-  color: #e31b1b;
 }
 
 .card img {
   max-width: 100%;
   height: auto;
-  object-fit: contain;
-  margin-bottom: 15px;
 }
 
-.card p {
-  font-size: 1rem;
-  line-height: 1.4;
-  color: #e31b1b;
+/* Responsive: mobile 2 kolone */
+@media (max-width: 899px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-/* ===== Footer ===== */
-.footer {
-  text-align: center;
-  margin-top: 50px;
-  padding: 20px;
-}
-
-.footer .teaser {
-  font-size: 1.1rem;
-  color: #e31b1b;
-  margin-bottom: 8px;
-}
-
-.footer a {
-  color: #e31b1b;
-  font-weight: bold;
+/* Responsive: desktop 1 kolona */
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    padding: 30px;
+  }
+  .card h2 {
+    font-size: 2rem;
+  }
 }
