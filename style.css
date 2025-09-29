@@ -1,94 +1,109 @@
-/* Global */
-:root {
-  --bg: #000000;
-  --text: #e6d6b8;
-  --accent: #d4af37;
+/* ========== Global ========== */
+:root{
+  --bg: #0b0b0b;          /* tamna pozadina */
+  --brand: #c61a12;       /* crvena za naslov i navigaciju */
+  --brand-glow: 0 0 8px rgba(198,26,18,.45), 0 0 22px rgba(198,26,18,.28);
+  --text: #c61a12;        /* crveni paragraf ispod slike */
+  --text-dim: #9c120c;    /* tamnija za hover/active nijanse */
 }
 
-body {
+*{ box-sizing: border-box; }
+html,body{ height: 100%; }
+body{
   margin: 0;
-  font-family: 'Georgia', serif;
-  background-color: var(--bg);
+  background: var(--bg);
   color: var(--text);
+  font-family: Georgia, serif;
   line-height: 1.6;
 }
 
-/* Navigacija */
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  background: transparent;
-}
-
-.nav .brand {
-  font-size: 28px;
-  font-weight: bold;
-  color: var(--text);
-  letter-spacing: 2px;
-}
-
-.nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 600;
-  transition: color 0.3s;
-}
-
-.nav a:hover,
-.nav a.active {
-  color: var(--accent);
-}
-
-/* Hero sekcija */
-.hero {
+/* ========== Header ========== */
+.site-header{
   max-width: 1100px;
-  margin: 40px auto;
-  padding: 24px;
+  margin: 0 auto;
+  padding: 28px 16px 8px;
   text-align: center;
 }
 
-.hero-img {
-  max-width: 90vw;   /* skaluje se za mobilne ekrane */
-  margin: 0 auto 24px;
-  display: block;
+/* Naslov */
+.brand{
+  margin: 0;
+  font-family: "Cinzel", serif;
+  font-weight: 900;
+  font-size: clamp(48px, 10vw, 128px);
+  letter-spacing: .02em;
+  color: var(--brand);
+  text-shadow: var(--brand-glow);
 }
 
-.tagline {
-  font-size: 20px;
-  margin: 20px auto;
-  max-width: 700px;
+/* Navigacija ispod naslova */
+.main-nav{
+  display: flex;
+  justify-content: center;
+  gap: clamp(16px, 6vw, 48px);
+  margin-top: 8px;
+  flex-wrap: wrap;
 }
 
-/* Dugme */
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-top: 20px;
+.main-nav a{
+  font-family: "Cinzel", serif;
+  font-weight: 700;
   text-decoration: none;
-  font-weight: bold;
-  text-transform: uppercase;
+  color: var(--brand);
+  font-size: clamp(18px, 3.8vw, 34px);
+  letter-spacing: .02em;
+  text-shadow: var(--brand-glow);
+  transition: transform .15s ease, color .15s ease;
 }
 
-.btn.outline {
-  border: 2px solid var(--accent);
-  color: var(--text);
-  border-radius: 6px;
-  transition: background 0.3s, color 0.3s;
+.main-nav a:hover{ 
+  transform: translateY(-1px);
+  color: #e02a1f;               /* malo svetlija crvena na hover */
 }
 
-.btn.outline:hover {
-  background: var(--accent);
-  color: #000;
+.main-nav a.active{
+  color: #ff3428;               /* aktivna stranica – još svetlija */
 }
 
-/* Footer */
-.footer {
+/* ========== Hero ========== */
+.hero{
+  max-width: 1100px;
+  margin: 18px auto 0;
+  padding: 0 16px;
+}
+.hero-img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;          /* blago zaobljene ivice kao na mockupu */
+  box-shadow: 0 12px 40px rgba(0,0,0,.5);
+}
+
+/* ========== Copy / Tagline ========== */
+.copy{
+  max-width: 1100px;
+  margin: 12px auto 40px;
+  padding: 0 16px;
+}
+.tagline{
+  margin: 22px auto 0;
+  max-width: 70ch;
+  font-size: clamp(18px, 3.8vw, 28px);
+  color: var(--text);           /* crveni tekst */
+  text-align: center;
+  text-shadow: 0 0 8px rgba(198,26,18,.25);
+}
+
+/* ========== Footer ========== */
+.footer{
   text-align: center;
   font-size: 14px;
-  padding: 20px;
-  margin-top: 40px;
-  opacity: 0.7;
+  color: #7a0f0b;               /* prigušena crvena */
+  padding: 28px 16px 40px;
+  opacity: .85;
+}
+
+/* ========== Sitni responsivni dodaci ========== */
+@media (min-width: 1200px){
+  .site-header{ padding-top: 36px; }
 }
