@@ -1,68 +1,85 @@
-body {
+/* Global reset & base */
+* { box-sizing: border-box; }
+html, body {
+  height: 100%;
   margin: 0;
-  padding: 0;
-  background: url("assets/room.png") no-repeat center center fixed;
-  background-size: cover;
-  background-color: #000;
-  font-family: 'Cinzel', serif;
-  color: #fff;
+  background: #000;                 /* pure black background */
+  color: #e01212;                   /* same red as title/menu */
+  font-family: "Cinzel", serif;     /* same font family */
+}
+
+/* Header: title + nav like Home */
+.site-header {
+  padding: 32px 20px 10px;
   text-align: center;
 }
 
-/* Title */
-.title {
-  font-size: 4rem;
-  color: #ff0000;
-  text-shadow: 0 0 20px #ff0000;
-  margin-top: 20px;
+.brand {
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  font-size: clamp(48px, 9vw, 120px);          /* scales nicely */
+  color: #e01212;
+  text-shadow:
+    0 0 10px rgba(224,18,18,0.55),
+    0 0 24px rgba(224,18,18,0.35),
+    0 0 48px rgba(224,18,18,0.25);             /* red glow */
 }
 
 /* Navigation */
-nav {
-  margin: 20px 0;
-}
-nav a {
-  margin: 0 20px;
-  text-decoration: none;
-  font-size: 1.5rem;
-  color: #ff0000;
-  text-shadow: 0 0 10px #ff0000;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-nav a:hover {
-  color: #fff;
-  text-shadow: 0 0 20px #ff0000;
-}
-
-/* Cards */
-.characters {
+.main-nav {
+  margin-top: 12px;
   display: flex;
-  flex-wrap: wrap;
+  gap: clamp(18px, 6vw, 64px);
   justify-content: center;
-  gap: 30px;
-  margin: 40px auto;
-  max-width: 1200px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.character-card {
-  background: rgba(0, 0, 0, 0.6);
-  border: 2px solid #ff0000;
-  border-radius: 12px;
-  padding: 10px 20px;
-  width: 250px; /* manja kartica */
+.main-nav a {
+  text-decoration: none;
+  color: #e01212;
+  font-weight: 700;
+  font-size: clamp(20px, 3.4vw, 40px);
+  letter-spacing: 0.03em;
+  text-shadow:
+    0 0 8px rgba(224,18,18,0.45),
+    0 0 20px rgba(224,18,18,0.25);
+  position: relative;
+}
+
+.main-nav a.active::after,
+.main-nav a:hover::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -6px;
+  height: 3px;
+  background: #e01212;
+  box-shadow: 0 0 10px rgba(224,18,18,0.7);
+  transform: translateZ(0);
+}
+
+/* Story block (same font & color) */
+.content {
+  max-width: 1100px;
+  margin: 36px auto 80px;
+  padding: 0 20px;
+}
+
+.intro {
+  margin: 0 auto;
   text-align: center;
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
-  transition: transform 0.3s ease;
-}
-.character-card:hover {
-  transform: scale(1.05);
-}
-
-.character-card img {
-  width: 200px;  /* veća slika */
-  height: auto;
+  line-height: 1.45;
+  font-weight: 700;
+  font-size: clamp(18px, 3.2vw, 34px);
+  color: #e01212;
+  text-shadow:
+    0 0 8px rgba(224,18,18,0.35),
+    0 0 18px rgba(224,18,18,0.22);
 }
 
-.character-card h2 {
-  color: #ff0000;
-  margin-top: 10
+/* Small screens: a touch more spacing so menu never overflows */
+@media (max-width: 400px) {
+  .site-header { padding-top: 24px; }
+  .main-nav { gap: 16px; }
+}
