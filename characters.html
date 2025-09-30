@@ -1,33 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nightlings • Characters</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nightlings - Characters</title>
+  <style>
+    body {
+      background-color: black;
+      color: red;
+      font-family: "Georgia", serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
 
-  <!-- Font close to your Home page look -->
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="characters.css" />
+    h1 {
+      font-size: 3rem;
+      color: red;
+      text-shadow: 0 0 15px red;
+      margin: 20px 0;
+    }
+
+    nav {
+      margin: 15px 0;
+    }
+
+    nav a {
+      color: red;
+      text-decoration: none;
+      font-size: 1.5rem;
+      margin: 0 15px;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      text-shadow: 0 0 10px red, 0 0 20px crimson;
+    }
+
+    .story-text {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: red;
+      text-shadow: 0 0 5px crimson;
+      padding: 20px;
+    }
+
+    .nightlings-img {
+      margin: 20px auto;
+      max-width: 90%;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.7);
+      display: block;
+    }
+
+    .brave-text {
+      font-size: 1.5rem;
+      color: crimson;
+      margin: 25px 0;
+      transition: 0.3s;
+    }
+
+    .brave-text:hover {
+      color: white;
+      text-shadow: 0 0 15px red, 0 0 25px crimson;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <h1 class="brand">NIGHTLINGS</h1>
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="characters.html" class="active">Characters</a>
-      <a href="story.html">Story</a>
-      <a href="collect.html">Collect</a>
-    </nav>
-  </header>
+  <h1>NIGHTLINGS</h1>
+  
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="characters.html">Characters</a>
+    <a href="story.html">Story</a>
+    <a href="collect.html">Collect</a>
+  </nav>
 
-  <main class="content">
-    <p class="intro">
-      When the lights go out, the Nightlings move as quiet as breath.
-      They don’t come to scare you — they guard your dreams and push
-      nightmares into the corner. If you hear a faint crackle or see a
-      candle flicker by itself… that’s their sign. Maybe there are more
-      of them hiding in the dark. Can you collect them all?
+  <div class="story-text">
+    <p>
+      When the lights go out, the Nightlings move as quiet as breath. They don’t come to scare you — 
+      they guard your dreams and push nightmares into the corner. If you hear a faint crackle or see a 
+      candle flicker by itself… that’s their sign. Maybe there are more of them hiding in the dark. 
+      Can you collect them all?
     </p>
-  </main>
+  </div>
+
+  <img src="nightlings.png" alt="Nightlings" class="nightlings-img">
+
+  <div class="brave-text">
+    Are you brave enough to collect them all?
+  </div>
 </body>
 </html>
